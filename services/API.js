@@ -1,7 +1,9 @@
+
+
 const API = {
-    url : "/data/menu.json",
-    fetchData: async () => {
-       const result = await fetch(url)
+    url : "./data/menu.json",
+    fetchData: async function() {
+       const result = await fetch(this.url)
        return await result.json()
     }
 }
