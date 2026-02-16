@@ -29,16 +29,19 @@ const Router = {
 			history.pushState({ path }, "", path);
 		}
 		const mainEl = document.querySelector("main");
-		const newEl = document.createElement("h1");
+		let newEl = document.createElement("h1");
 		switch (path) {
 			case "/":
-				newEl.textContent = "index";
+				newEl = document.createElement("menu-element");
+				newEl.textContent = "menu";
 				break;
 			case "/order":
+				newEl = document.createElement("order-element");
 				newEl.textContent = "order now";
 				break;
 			default:
 				if (path.startsWith("/product-")) {
+					newEl = document.createElement("details-element");
 					newEl.textContent = "Details";
 					const paramId = path.substring(path.lastIndexOf("-") + 1);
 					newEl.dataset.id = paramId;

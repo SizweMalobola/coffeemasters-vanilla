@@ -2,6 +2,10 @@ import Store from "./services/Store.js";
 import Router from "./services/Router.js";
 import { loadData } from "./services/Menu.js";
 
+// custom elements linking
+import "./components/MenuPage.js";
+import "./components/OrderPage.js";
+import "./components/DetailsPage.js";
 // now how do we get the store to become global?
 // well one way is to
 // do this
